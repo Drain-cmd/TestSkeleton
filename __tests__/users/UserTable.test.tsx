@@ -17,7 +17,7 @@ jest.mock("../../app/users/components/UpdateUserButton", () => () => (
 
 const usersMock = [
   { id: 1, name: "Toto", email: "toto@toto.com" },
-  { id: 2, name: "Azir", email: "azir@azir.com" },
+  { id: 2, name: "Zair", email: "azir@azir.com" },
 ];
 
 describe("Testing UserTable", () => {
@@ -46,7 +46,7 @@ describe("Testing UserTable", () => {
 
     const rows = screen.getAllByRole("row").slice(1);
 
-    expect(rows[0]).toHaveTextContent("azir@azir.com");
-    expect(rows[1]).toHaveTextContent("toto@toto.com");
+    expect(rows[0]).toHaveTextContent(usersMock[1].email);
+    expect(rows[1]).toHaveTextContent(usersMock[0].email);
   });
 });
