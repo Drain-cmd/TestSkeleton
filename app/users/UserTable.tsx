@@ -2,7 +2,7 @@ import Link from "next/link";
 import { sort } from "fast-sort";
 import DeleteUserButton from "./components/DeleteUserButton";
 import { User } from "./interfaceUser";
-import { getUsers, deleteUser } from "../actions/users/ActionsUser";
+import { getUsers } from "../actions/users/ActionsUser";
 import UpdateUserButton from "./components/UpdateUserButton";
 
 interface UserTableProps {

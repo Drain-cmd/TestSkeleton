@@ -2,7 +2,6 @@ import "@testing-library/jest-dom";
 import { render, screen, fireEvent, act, waitFor } from "@testing-library/react";
 import UpdateUserButton from "../../../app/users/components/UpdateUserButton";
 
-// Mock de la Server Action
 jest.mock("../../../app/actions/users/ActionsUser", () => ({
   updateUser: jest.fn(),
 }));
@@ -21,7 +20,6 @@ describe("UpdateUserButton", () => {
   });
 
   it("calls updateUser when clicked", async () => {
-    // mock de la promesse
     // @ts-ignore
     updateUser.mockResolvedValueOnce({});
 

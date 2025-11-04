@@ -2,14 +2,12 @@ import "@testing-library/jest-dom";
 import { render, screen, fireEvent, act, waitFor } from "@testing-library/react";
 import CreateUserForm from "../../../app/users/new/CreateUserForm";
 
-// Mock de la Server Action
 jest.mock("../../../app/actions/users/ActionsUser", () => ({
   createUser: jest.fn(),
 }));
 
 import { createUser } from "../../../app/actions/users/ActionsUser";
 
-// Mock de useRouter
 const pushMock = jest.fn();
 jest.mock("next/navigation", () => ({
   useRouter: () => ({
